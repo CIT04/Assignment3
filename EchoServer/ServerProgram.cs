@@ -59,7 +59,7 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         };
     }
 
-    if (request.Method != "create" || request.Method != "read" || request.Method != "update" || request.Method != "delete" || request.Method != "echo" )
+    if (request.Method != "create"  && request.Method != "read" && request.Method != "update" && request.Method != "delete" && request.Method != "echo" )
     {
         return new CJTPResponse
         {
@@ -67,7 +67,16 @@ CJTPResponse ProcessRequest(CJTPRequest request)
             Body = "illegal method"
         };
     }
-       
+
+    if (string.IsNullOrWhiteSpace(request.Path) || string.IsNullOrWhiteSpace(request.Date))
+    {
+        return new CJTPResponse
+        {
+            Status = "missing resource",
+            Body = "missing resource"
+        };
+    }
+
     // Add more request processing logic as needed
     else
     {

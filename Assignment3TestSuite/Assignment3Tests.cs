@@ -77,7 +77,7 @@ namespace Assignment3TestSuite
         }
 
         
-        /*
+        
         [Theory]
         [InlineData("create")]
         [InlineData("read")]
@@ -103,6 +103,7 @@ namespace Assignment3TestSuite
         /* Date Tests    */
         /*
         [Fact]
+
         public void Constraint_RequestWithoutDate_MissingDateError()
         {
             var client = Connect();
