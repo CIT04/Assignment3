@@ -12,3 +12,17 @@ C:\Users\Marcus\Documents\GitHub\Assignment3\EchoClient\obj\Debug\net7.0\refint\
 C:\Users\Marcus\Documents\GitHub\Assignment3\EchoClient\obj\Debug\net7.0\EchoClient.pdb
 C:\Users\Marcus\Documents\GitHub\Assignment3\EchoClient\obj\Debug\net7.0\EchoClient.genruntimeconfig.cache
 C:\Users\Marcus\Documents\GitHub\Assignment3\EchoClient\obj\Debug\net7.0\ref\EchoClient.dll
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoClient\bin\Debug\net7.0\EchoClient.exe
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoClient\bin\Debug\net7.0\EchoClient.deps.json
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoClient\bin\Debug\net7.0\EchoClient.runtimeconfig.json
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoClient\bin\Debug\net7.0\EchoClient.dll
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoClient\bin\Debug\net7.0\EchoClient.pdb
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoClient\obj\Debug\net7.0\EchoClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoClient\obj\Debug\net7.0\EchoClient.AssemblyInfoInputs.cache
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoClient\obj\Debug\net7.0\EchoClient.AssemblyInfo.cs
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoClient\obj\Debug\net7.0\EchoClient.csproj.CoreCompileInputs.cache
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoClient\obj\Debug\net7.0\EchoClient.dll
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoClient\obj\Debug\net7.0\refint\EchoClient.dll
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoClient\obj\Debug\net7.0\EchoClient.pdb
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoClient\obj\Debug\net7.0\EchoClient.genruntimeconfig.cache
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoClient\obj\Debug\net7.0\ref\EchoClient.dll

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marcus\\Documents\\GitHub\\Assignment3\\Assignment3TestSuite\\Assignment3TestSuite.csproj": {}
+    "C:\\Users\\magnu\\Documents\\GitHub\\Assignment3\\Assignment3TestSuite\\Assignment3TestSuite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marcus\\Documents\\GitHub\\Assignment3\\Assignment3TestSuite\\Assignment3TestSuite.csproj": {
+    "C:\\Users\\magnu\\Documents\\GitHub\\Assignment3\\Assignment3TestSuite\\Assignment3TestSuite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marcus\\Documents\\GitHub\\Assignment3\\Assignment3TestSuite\\Assignment3TestSuite.csproj",
+        "projectUniqueName": "C:\\Users\\magnu\\Documents\\GitHub\\Assignment3\\Assignment3TestSuite\\Assignment3TestSuite.csproj",
         "projectName": "Assignment3TestSuite",
-        "projectPath": "C:\\Users\\Marcus\\Documents\\GitHub\\Assignment3\\Assignment3TestSuite\\Assignment3TestSuite.csproj",
-        "packagesPath": "C:\\Users\\Marcus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marcus\\Documents\\GitHub\\Assignment3\\Assignment3TestSuite\\obj\\",
+        "projectPath": "C:\\Users\\magnu\\Documents\\GitHub\\Assignment3\\Assignment3TestSuite\\Assignment3TestSuite.csproj",
+        "packagesPath": "C:\\Users\\magnu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\magnu\\Documents\\GitHub\\Assignment3\\Assignment3TestSuite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Marcus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\magnu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
