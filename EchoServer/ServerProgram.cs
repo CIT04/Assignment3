@@ -17,27 +17,33 @@ while (true)
     var client = server.AcceptTcpClient();
     Console.WriteLine("Client connected");
 
-    string request = "";
-    CJTPResponse response = new CJTPResponse();
+    // Use a thread to handle the client
+    ThreadPool.QueueUserWorkItem(HandleClient, client);
+}
+
+// Method to handle a client's request on a separate thread
+void HandleClient(object clientObj)
+{
+    var client = (TcpClient)clientObj;
 
     try
     {
-        request = client.MyRead();
+        string request = client.MyRead();
         Console.WriteLine($"Request: {request}");
 
-        // Process the request here.
         CJTPRequest cjtpRequest = JsonConvert.DeserializeObject<CJTPRequest>(request);
-        response = ProcessRequest(cjtpRequest);
+
+        CJTPResponse response = ProcessRequest(cjtpRequest);
+
+        client.MyWrite(JsonConvert.SerializeObject(response));
     }
     catch (IOException)
     {
-        // Handle the exception gracefully, e.g., log the error or continue listening for new connections.
+        // Handle the exception gracefully, e.g., log the error and continue listening for new connections.
         Console.WriteLine("Connection closed by the client.");
     }
-
-    // Respond to the client
-    client.MyWrite(JsonConvert.SerializeObject(response));
 }
+
 
 // RequestHandler to process CJTPRequest and generate CJTPResponse
 CJTPResponse ProcessRequest(CJTPRequest request)
@@ -52,6 +58,16 @@ CJTPResponse ProcessRequest(CJTPRequest request)
             Body = "Missing Method"
         };
     }
+
+    if (request.Method != "create" || request.Method != "read" || request.Method != "update" || request.Method != "delete" || request.Method != "echo" )
+    {
+        return new CJTPResponse
+        {
+            Status = "illegal method",
+            Body = "illegal method"
+        };
+    }
+       
     // Add more request processing logic as needed
     else
     {
