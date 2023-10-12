@@ -1,0 +1,14 @@
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\bin\Debug\net7.0\EchoServer.exe
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\bin\Debug\net7.0\EchoServer.deps.json
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\bin\Debug\net7.0\EchoServer.runtimeconfig.json
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\bin\Debug\net7.0\EchoServer.dll
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\bin\Debug\net7.0\EchoServer.pdb
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.AssemblyInfoInputs.cache
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.AssemblyInfo.cs
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.csproj.CoreCompileInputs.cache
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.dll
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\refint\EchoServer.dll
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.pdb
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.genruntimeconfig.cache
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\ref\EchoServer.dll
