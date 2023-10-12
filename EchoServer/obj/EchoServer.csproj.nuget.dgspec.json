@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\magnu\\Documents\\GitHub\\Assignment3\\EchoServer\\EchoServer.csproj": {}
+    "C:\\Users\\Marcus\\Documents\\GitHub\\Assignment3\\EchoServer\\EchoServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\magnu\\Documents\\GitHub\\Assignment3\\EchoServer\\EchoServer.csproj": {
+    "C:\\Users\\Marcus\\Documents\\GitHub\\Assignment3\\EchoServer\\EchoServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\magnu\\Documents\\GitHub\\Assignment3\\EchoServer\\EchoServer.csproj",
+        "projectUniqueName": "C:\\Users\\Marcus\\Documents\\GitHub\\Assignment3\\EchoServer\\EchoServer.csproj",
         "projectName": "EchoServer",
-        "projectPath": "C:\\Users\\magnu\\Documents\\GitHub\\Assignment3\\EchoServer\\EchoServer.csproj",
-        "packagesPath": "C:\\Users\\magnu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\magnu\\Documents\\GitHub\\Assignment3\\EchoServer\\obj\\",
+        "projectPath": "C:\\Users\\Marcus\\Documents\\GitHub\\Assignment3\\EchoServer\\EchoServer.csproj",
+        "packagesPath": "C:\\Users\\Marcus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marcus\\Documents\\GitHub\\Assignment3\\EchoServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\magnu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Marcus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

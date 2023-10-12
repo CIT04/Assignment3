@@ -12,3 +12,17 @@ C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\refint\E
 C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.pdb
 C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.genruntimeconfig.cache
 C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\ref\EchoServer.dll
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\bin\Debug\net7.0\EchoServer.exe
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\bin\Debug\net7.0\EchoServer.deps.json
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\bin\Debug\net7.0\EchoServer.runtimeconfig.json
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\bin\Debug\net7.0\EchoServer.dll
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\bin\Debug\net7.0\EchoServer.pdb
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.AssemblyInfoInputs.cache
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.AssemblyInfo.cs
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.csproj.CoreCompileInputs.cache
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.dll
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\refint\EchoServer.dll
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.pdb
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.genruntimeconfig.cache
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\ref\EchoServer.dll
