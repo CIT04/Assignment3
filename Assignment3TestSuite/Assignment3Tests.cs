@@ -10,7 +10,6 @@ using Xunit;
 
 namespace Assignment3TestSuite
 {
-   CHANGE TEST
     public class Response
     {
         public string Status { get; set; }
