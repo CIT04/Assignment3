@@ -16,14 +16,18 @@ while(true)
 
     NetworkStream stream;
 
-
-
     string request = client.MyRead();
 
     Console.WriteLine($"Request: {request}");
 
+
     var response = request.ToUpper();
 
+    if
+        (request == "")
+    {
+        response = "Missing Method";
+    }
     client.MyWrite(response);
 
 

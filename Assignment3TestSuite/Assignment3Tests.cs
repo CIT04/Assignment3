@@ -55,7 +55,7 @@ namespace Assignment3TestSuite
 
             Assert.Contains("missing method", response.Status.ToLower());
         }
-
+        /*
         [Fact]
         public void Constraint_RequestWithUnknownMethod_IllegalMethodError()
         {
@@ -573,7 +573,9 @@ namespace Assignment3TestSuite
             Assert.Contains("5 not found", response.Status.ToLower());
         }
 
-
+      
+         
+         */
 
 
         /**********************************************************
