@@ -50,6 +50,8 @@ CJTPResponse ProcessRequest(CJTPRequest request)
 {
     string status = "";
     //Tests for method
+
+
     if (string.IsNullOrWhiteSpace(request.Method))
     {
         status += "Missing Method ";
@@ -70,11 +72,11 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         status += "Missing Date ";
     }
 
-    if (!IsUnixTime(request.Date))
+    if (!long.TryParse(request.Date, out _))
     {
         status += "Illegal Date ";
     }
- 
+
     //Send back succes if no errors have been added to status
     if (string.IsNullOrEmpty(status))
     {
@@ -93,11 +95,7 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         };
     }
 }
-    bool IsUnixTime(string value)
-{
-    long unixTime;
-    return long.TryParse(value, out unixTime) && DateTimeOffset.FromUnixTimeSeconds(unixTime) > DateTimeOffset.MinValue;
-}
+   
 
 public class CJTPRequest
 {

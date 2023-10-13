@@ -125,11 +125,11 @@ namespace Assignment3TestSuite
             {
                 Method = "update",
                 Path = "testing",
-                Date =  "10", //DateTimeOffset.Now.ToString(),
+                Date =  DateTimeOffset.Now.ToString(),
                 Body = (new { cid = 1, Name = "Beverages"}).ToJson()
             };
 
-            client.SendRequest(request.ToJson());
+        client.SendRequest(request.ToJson());
             var response = client.ReadResponse();
 
             Assert.Contains("illegal date", response.Status.ToLower());
