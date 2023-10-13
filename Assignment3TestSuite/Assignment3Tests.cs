@@ -158,7 +158,7 @@ namespace Assignment3TestSuite
             Assert.Contains("missing body", response.Status.ToLower());
         }
         
-        /*
+        
         [Fact]
         public void Constraint_RequestUpdateWithoutJsonBody_IllegalBodyError()
         {
@@ -181,7 +181,7 @@ namespace Assignment3TestSuite
         }
 
         /* Echo Test */
-        /*
+        
         [Fact]
         public void Echo_RequestWithBody_ReturnsBody()
         {
@@ -200,7 +200,7 @@ namespace Assignment3TestSuite
             Assert.Equal("Hello World", response.Body);
 
         }
-        */
+        
         //////////////////////////////////////////////////////////
         /// 
         /// Testing API 

@@ -5,6 +5,7 @@ using System.Net.Sockets;
 using Newtonsoft.Json;
 using System.IO;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
 var port = 5000;
 
@@ -85,6 +86,21 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         status += "missing body";
     }
 
+    if ((request.Method == "create" || request.Method == "update") && !IsValidJson(request.Body))
+    {
+        status += "illegal body ";
+    }
+
+    if (request.Method == "echo" && IsValidJson(request.Body))
+    {
+        return new CJTPResponse
+        {
+            Status = "Success",
+            Body = request.Body
+        };
+    }
+
+
     //Send back succes if no errors have been added to status
     if (string.IsNullOrEmpty(status))
     {
@@ -103,7 +119,31 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         };
     }
 }
-   
+
+ static bool IsValidJson(string json)
+{
+    if (string.IsNullOrWhiteSpace(json))
+    {
+        return false;
+    }
+
+    json = json.Trim();
+
+    if ((json.StartsWith("{") && json.EndsWith("}")) || (json.StartsWith("[") && json.EndsWith("]")))
+    {
+        try
+        {
+            JToken.Parse(json);
+            return true;
+        }
+        catch (JsonReaderException)
+        {
+            return false;
+        }
+    }
+
+    return false;
+}
 
 public class CJTPRequest
 {
@@ -118,3 +158,4 @@ public class CJTPResponse
     public string Status { get; set; }
     public string Body { get; set; }
 }
+
