@@ -4,6 +4,7 @@ using System.Net;
 using System.Net.Sockets;
 using Newtonsoft.Json;
 using System.IO;
+using System.Threading.Tasks;
 
 var port = 5000;
 
@@ -17,8 +18,8 @@ while (true)
     var client = server.AcceptTcpClient();
     Console.WriteLine("Client connected");
 
-    // Use a thread to handle the client
-    ThreadPool.QueueUserWorkItem(HandleClient, client);
+    // Use Task.Run to handle the client on a separate thread
+    Task.Run(() => HandleClient(client));
 }
 
 // Method to handle a client's request on a separate thread
@@ -43,7 +44,6 @@ void HandleClient(object clientObj)
         Console.WriteLine("Connection closed by the client.");
     }
 }
-
 
 // RequestHandler to process CJTPRequest and generate CJTPResponse
 CJTPResponse ProcessRequest(CJTPRequest request)
@@ -74,6 +74,14 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         {
             Status = "missing resource",
             Body = "missing resource"
+        };
+    }
+    if (string.IsNullOrWhiteSpace(request.Date))
+    {
+        return new CJTPResponse
+        {
+            Status = "Missing Date",
+            Body = "Missing Date"
         };
     }
 
