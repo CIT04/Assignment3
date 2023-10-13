@@ -50,8 +50,7 @@ void HandleClient(object clientObj)
 CJTPResponse ProcessRequest(CJTPRequest request)
 {
     string status = "";
-    //Tests for method
-
+    // Tests for method
 
     if (string.IsNullOrWhiteSpace(request.Method))
     {
@@ -67,7 +66,7 @@ CJTPResponse ProcessRequest(CJTPRequest request)
     {
         status += "missing resource ";
     }
-    //Tests for date
+    // Tests for date
     if (string.IsNullOrWhiteSpace(request.Date))
     {
         status += "Missing Date ";
@@ -78,10 +77,9 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         status += "Illegal Date ";
     }
 
-
-    //Test to check if method is missing nessesary body
+    // Test to check if method is missing necessary body
     if (request.Method == "create" || request.Method == "update" ||
-        request.Method == "echo" && string.IsNullOrEmpty(request.Body))
+        (request.Method == "echo" && string.IsNullOrEmpty(request.Body)))
     {
         status += "missing body";
     }
@@ -91,7 +89,7 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         status += "illegal body ";
     }
 
-    if (request.Method == "echo" && IsValidJson(request.Body))
+    if (request.Method == "echo" && !string.IsNullOrEmpty(request.Body))
     {
         return new CJTPResponse
         {
@@ -100,8 +98,7 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         };
     }
 
-
-    //Send back succes if no errors have been added to status
+    // Send back success if no errors have been added to status
     if (string.IsNullOrEmpty(status))
     {
         return new CJTPResponse
@@ -114,13 +111,14 @@ CJTPResponse ProcessRequest(CJTPRequest request)
     {
         return new CJTPResponse
         {
-            Status = status.Trim(), 
-            Body = status.Trim() 
+            Status = status.Trim(),
+            Body = status.Trim()
         };
     }
 }
 
- static bool IsValidJson(string json)
+
+static bool IsValidJson(string json)
 {
     if (string.IsNullOrWhiteSpace(json))
     {
