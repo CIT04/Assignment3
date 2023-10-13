@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+814m2+5ndNz5jxWw9piMc3RkZMUKlA5ftIkcVAx3V1Noa4bn+Of/lBfaIyIpnXlMdNYYQoG3j9l9I+HfxVGhQ==",
+  "dgSpecHash": "P+qAKKy+PkCkk4kcv3JFpglSpEgaUTeru+38v2Hda7uodhVCO6fIyk/x3ylAQUsW+ZV556fvhX/Xhh1UmazJOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\magnu\\Documents\\GitHub\\Assignment3\\EchoServer\\EchoServer.csproj",
+  "projectFilePath": "C:\\Users\\Marcus\\Documents\\GitHub\\Assignment3\\EchoServer\\EchoServer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\magnu\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Marcus\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

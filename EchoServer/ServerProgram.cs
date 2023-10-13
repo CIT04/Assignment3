@@ -70,7 +70,11 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         status += "Missing Date ";
     }
 
-    if (string.)
+    if (!IsUnixTime(request.Date))
+    {
+        status += "Illegal Date ";
+    }
+ 
     //Send back succes if no errors have been added to status
     if (string.IsNullOrEmpty(status))
     {
@@ -89,7 +93,11 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         };
     }
 }
-
+    bool IsUnixTime(string value)
+{
+    long unixTime;
+    return long.TryParse(value, out unixTime) && DateTimeOffset.FromUnixTimeSeconds(unixTime) > DateTimeOffset.MinValue;
+}
 
 public class CJTPRequest
 {
