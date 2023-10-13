@@ -77,6 +77,14 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         status += "Illegal Date ";
     }
 
+
+    //Test to check if method is missing nessesary body
+    if (request.Method == "create" || request.Method == "update" ||
+        request.Method == "echo" && string.IsNullOrEmpty(request.Body))
+    {
+        status += "missing body";
+    }
+
     //Send back succes if no errors have been added to status
     if (string.IsNullOrEmpty(status))
     {

@@ -136,7 +136,7 @@ namespace Assignment3TestSuite
         }
         
         /* Body Tests    */
-        /*
+        
         [Theory]
         [InlineData("create")]
         [InlineData("update")]
@@ -157,7 +157,7 @@ namespace Assignment3TestSuite
 
             Assert.Contains("missing body", response.Status.ToLower());
         }
-        */
+        
         /*
         [Fact]
         public void Constraint_RequestUpdateWithoutJsonBody_IllegalBodyError()
