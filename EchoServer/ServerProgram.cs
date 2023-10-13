@@ -49,7 +49,7 @@ void HandleClient(object clientObj)
 CJTPResponse ProcessRequest(CJTPRequest request)
 {
     string status = "";
-
+    //Tests for method
     if (string.IsNullOrWhiteSpace(request.Method))
     {
         status += "Missing Method ";
@@ -64,14 +64,14 @@ CJTPResponse ProcessRequest(CJTPRequest request)
     {
         status += "missing resource ";
     }
-
+    //Tests for date
     if (string.IsNullOrWhiteSpace(request.Date))
     {
         status += "Missing Date ";
     }
 
-    // Add more request processing logic as needed
-
+    if (string.)
+    //Send back succes if no errors have been added to status
     if (string.IsNullOrEmpty(status))
     {
         return new CJTPResponse
@@ -84,8 +84,8 @@ CJTPResponse ProcessRequest(CJTPRequest request)
     {
         return new CJTPResponse
         {
-            Status = status.Trim(), // Trim to remove any trailing space
-            Body = status.Trim() // Trim to remove any trailing space
+            Status = status.Trim(), 
+            Body = status.Trim() 
         };
     }
 }

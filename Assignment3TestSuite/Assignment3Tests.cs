@@ -115,7 +115,7 @@ namespace Assignment3TestSuite
             Assert.Contains("missing date", response.Status.ToLower());
         }
         
-        /*
+        
         [Fact]
         public void Constraint_RequestWhereDateIsNotUnixTime_IllegalDateError()
         {
@@ -134,7 +134,7 @@ namespace Assignment3TestSuite
 
             Assert.Contains("illegal date", response.Status.ToLower());
         }
-        */
+        
         /* Body Tests    */
         /*
         [Theory]
