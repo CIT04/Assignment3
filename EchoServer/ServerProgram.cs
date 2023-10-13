@@ -48,45 +48,31 @@ void HandleClient(object clientObj)
 // RequestHandler to process CJTPRequest and generate CJTPResponse
 CJTPResponse ProcessRequest(CJTPRequest request)
 {
-    // Implement request processing logic here
-    // Return an appropriate CJTPResponse based on the request.
-    if (string.IsNullOrWhiteSpace(request.Method) || request.Method == "{}")
+    string status = "";
+
+    if (string.IsNullOrWhiteSpace(request.Method))
     {
-        return new CJTPResponse
-        {
-            Status = "Missing Method",
-            Body = "Missing Method"
-        };
+        status += "Missing Method ";
     }
 
-    if (request.Method != "create"  && request.Method != "read" && request.Method != "update" && request.Method != "delete" && request.Method != "echo" )
+    if (request.Method != "create" && request.Method != "read" && request.Method != "update" && request.Method != "delete" && request.Method != "echo")
     {
-        return new CJTPResponse
-        {
-            Status = "illegal method",
-            Body = "illegal method"
-        };
+        status += "illegal method ";
     }
 
     if (string.IsNullOrWhiteSpace(request.Path) || string.IsNullOrWhiteSpace(request.Date))
     {
-        return new CJTPResponse
-        {
-            Status = "missing resource",
-            Body = "missing resource"
-        };
+        status += "missing resource ";
     }
+
     if (string.IsNullOrWhiteSpace(request.Date))
     {
-        return new CJTPResponse
-        {
-            Status = "Missing Date",
-            Body = "Missing Date"
-        };
+        status += "Missing Date ";
     }
 
     // Add more request processing logic as needed
-    else
+
+    if (string.IsNullOrEmpty(status))
     {
         return new CJTPResponse
         {
@@ -94,7 +80,16 @@ CJTPResponse ProcessRequest(CJTPRequest request)
             Body = request.Method.ToUpper()
         };
     }
+    else
+    {
+        return new CJTPResponse
+        {
+            Status = status.Trim(), // Trim to remove any trailing space
+            Body = status.Trim() // Trim to remove any trailing space
+        };
+    }
 }
+
 
 public class CJTPRequest
 {
