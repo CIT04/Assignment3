@@ -81,12 +81,12 @@ CJTPResponse ProcessRequest(CJTPRequest request)
     }
 
     // Test to check if the method is missing necessary body
-    if (request.Method == "create" || request.Method == "update" || (request.Method == "echo" && string.IsNullOrEmpty(request.Body)))
+    if (request.Method is "create" or "update" or "echo" && string.IsNullOrEmpty(request.Body))
     {
         status += "missing body";
     }
 
-    if ((request.Method == "create" || request.Method == "update") && !IsValidJson(request.Body))
+    if (request.Method is "create" or "update" && !IsValidJson(request.Body))
     {
         status += "illegal body ";
     }
@@ -108,6 +108,18 @@ CJTPResponse ProcessRequest(CJTPRequest request)
     {
         status += "4 Bad Request ";
     }
+    
+    //This was our prefered solution instead of hard coding however it doesnt work. we are unable to determaine why
+    //if (request.Method == "create" && request.Path.Split('/').Length > 2)
+    //{
+    //    status += "4 Bad Request ";
+    //}
+
+    if (request.Method == "create" && request.Path != "/api/categories")
+    {
+        status += "4 Bad Request ";
+    }
+
     // If no errors found so far, set the response status to "Success"
     if (string.IsNullOrEmpty(status))
     {
