@@ -394,9 +394,8 @@ namespace Assignment3TestSuite
             Assert.Contains("5 not found", response.Status.ToLower());
         }
         
-
-        /* Update tests  */
         /*
+      
         [Fact]
         public void Request_UpdateCategoryWithValidIdAndBody_StatusUpdated()
         {
