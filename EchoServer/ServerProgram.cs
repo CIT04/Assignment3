@@ -104,7 +104,7 @@ CJTPResponse ProcessRequest(CJTPRequest request)
     // API tests
     // Wrong categories -path
 
-    if (!IsValidCategoryPath(request.Path))
+    if (!IsValidUpdateDeletePath(request.Path))
     {
         status += "4 Bad Request ";
     }
@@ -128,7 +128,18 @@ CJTPResponse ProcessRequest(CJTPRequest request)
     //}
     // If no errors found so far, set the response status to "Success"
 
-    
+    if (request.Method == "read" && IsValidReadPath(request.Path))
+    {
+        List<categories> categoriesList = Data.GetCategoriesList();
+        string categoriesJson = JsonConvert.SerializeObject(categoriesList); // Assuming you're using JSON.NET
+
+        return new CJTPResponse
+        {
+            Status = "1 Ok",
+            Body = categoriesJson
+        };
+    }
+
     if (string.IsNullOrEmpty(status))
     {
         return new CJTPResponse
@@ -145,7 +156,19 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         };
     }
 }
-bool IsValidCategoryPath(string path)
+bool IsValidReadPath(string path)
+{
+    var categories = Data.GetCategoriesList();
+    foreach (var category in categories)
+    {
+        if (path == $"/api/categories/{category.cid}" || path== "/api/categories")
+        {
+            return true;
+        }
+    }
+    return false;
+}
+bool IsValidUpdateDeletePath(string path)
 {
     var categories = Data.GetCategoriesList();
     foreach (var category in categories)

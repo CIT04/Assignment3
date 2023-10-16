@@ -318,7 +318,7 @@ namespace Assignment3TestSuite
 
 
         /* Read tests */
-        /*
+        
         [Fact]
         public void Request_ReadCategories_StatusOkAndListOfCategoriesInBody()
         {
@@ -349,7 +349,7 @@ namespace Assignment3TestSuite
 
             Assert.Equal(expectedResponse.ToJson(), response.ToJson());
         }
-        */
+        
         /*
         [Fact]
         public void Request_ReadCategoryWithValidId_StatusOkAndCategoryInBody()
