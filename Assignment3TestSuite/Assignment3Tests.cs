@@ -350,7 +350,7 @@ namespace Assignment3TestSuite
             Assert.Equal(expectedResponse.ToJson(), response.ToJson());
         }
         
-        /*
+        
         [Fact]
         public void Request_ReadCategoryWithValidId_StatusOkAndCategoryInBody()
         {
@@ -374,8 +374,8 @@ namespace Assignment3TestSuite
 
             Assert.Equal(expectedResponse.ToJson(), response.ToJson());
         }
-        */
-        /*
+        
+        
         [Fact]
         public void Request_ReadCategoryWithInvalidId_StatusNotFound()
         {
@@ -393,7 +393,7 @@ namespace Assignment3TestSuite
 
             Assert.Contains("5 not found", response.Status.ToLower());
         }
-        */
+        
 
         /* Update tests  */
         /*

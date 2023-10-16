@@ -131,14 +131,37 @@ CJTPResponse ProcessRequest(CJTPRequest request)
     if (request.Method == "read" && IsValidReadPath(request.Path))
     {
         List<categories> categoriesList = Data.GetCategoriesList();
-        string categoriesJson = JsonConvert.SerializeObject(categoriesList); // Assuming you're using JSON.NET
+        string categoriesJson = JsonConvert.SerializeObject(categoriesList);
 
-        return new CJTPResponse
+        if (request.Path == "/api/categories")
         {
-            Status = "1 Ok",
-            Body = categoriesJson
-        };
+            return new CJTPResponse
+            {
+                Status = "1 Ok",
+                Body = categoriesJson
+            };
+        }
+        else if (request.Path.StartsWith("/api/categories/"))
+        {
+            // Extract the category ID from the path
+            int categoryId;
+            if (int.TryParse(request.Path.Split('/').Last(), out categoryId))
+            {
+                // Find the category with the specified ID
+                var category = categoriesList.FirstOrDefault(c => c.cid == categoryId);
+
+                if (category != null)
+                {
+                    return new CJTPResponse
+                    {
+                        Status = "1 Ok",
+                        Body = JsonConvert.SerializeObject(category)
+                    };
+                }
+            }
+        }
     }
+
 
     if (string.IsNullOrEmpty(status))
     {
