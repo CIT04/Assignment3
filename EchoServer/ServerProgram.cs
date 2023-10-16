@@ -120,7 +120,15 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         status += "4 Bad Request ";
     }
 
+
+    //Not needed
+    //if (request.Method == "update" && !IsValidCategoryPath(request.Path))
+    //{
+    //    status += "4 Bad Request ";
+    //}
     // If no errors found so far, set the response status to "Success"
+
+    
     if (string.IsNullOrEmpty(status))
     {
         return new CJTPResponse

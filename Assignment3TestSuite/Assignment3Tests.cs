@@ -272,7 +272,7 @@ namespace Assignment3TestSuite
             Assert.Equal(expectedResponse.ToJson().ToLower(), response.ToJson().ToLower());
         }
         
-        /*
+        
         [Fact]
         public void Constraint_UpdateWithOutPathId_StatusBadRequest()
         {
@@ -293,8 +293,8 @@ namespace Assignment3TestSuite
 
             Assert.Equal(expectedResponse.ToJson().ToLower(), response.ToJson().ToLower());
         }
-        */
-        /*
+        
+        
         [Fact]
         public void Constraint_DeleteWithOutPathId_StatusBadRequest()
         {
@@ -314,7 +314,7 @@ namespace Assignment3TestSuite
 
             Assert.Equal(expectedResponse.ToJson().ToLower(), response.ToJson().ToLower());
         }
-        */
+        
 
 
         /* Read tests */
