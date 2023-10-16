@@ -229,7 +229,7 @@ namespace Assignment3TestSuite
             Assert.Equal(expectedResponse.ToJson().ToLower(), response.ToJson().ToLower());
         }
         
-        /*
+        
         [Fact]
         public void Constraint_RequestWithInvalidPathId_StatusBadRequest()
         {
@@ -249,7 +249,7 @@ namespace Assignment3TestSuite
 
             Assert.Equal(expectedResponse.ToJson().ToLower(), response.ToJson().ToLower());
         }
-        */
+        
         /*
         [Fact]
         public void Constraint_CreateWithPathId_StatusBadRequest()

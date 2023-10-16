@@ -39,11 +39,13 @@ void HandleClient(object clientObj)
         CJTPResponse response = ProcessRequest(cjtpRequest);
 
         client.MyWrite(JsonConvert.SerializeObject(response));
+        client.Close();
     }
     catch (IOException)
     {
         // Handle the exception gracefully, e.g., log the error and continue listening for new connections.
         Console.WriteLine("Connection closed by the client.");
+        client.Close();
     }
 }
 
@@ -78,9 +80,8 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         status += "Illegal Date ";
     }
 
-    // Test to check if method is missing necessary body
-    if (request.Method == "create" || request.Method == "update" ||
-        (request.Method == "echo" && string.IsNullOrEmpty(request.Body)))
+    // Test to check if the method is missing necessary body
+    if (request.Method == "create" || request.Method == "update" || (request.Method == "echo" && string.IsNullOrEmpty(request.Body)))
     {
         status += "missing body";
     }
@@ -90,7 +91,7 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         status += "illegal body ";
     }
 
-    //Send echo
+    // Send echo
     if (request.Method == "echo" && !string.IsNullOrEmpty(request.Body))
     {
         return new CJTPResponse
@@ -100,15 +101,14 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         };
     }
 
-    //API tests
-    //Wrong categories -path
-    if (request.Path is not ("/api/categories" or "testing"))
+    // API tests
+    // Wrong categories -path
+
+    if (!IsValidCategoryPath(request.Path))
     {
         status += "4 Bad Request ";
-    } 
-
-
-    // Send back success if no errors have been added to status
+    }
+    // If no errors found so far, set the response status to "Success"
     if (string.IsNullOrEmpty(status))
     {
         return new CJTPResponse
@@ -125,8 +125,18 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         };
     }
 }
-
-
+bool IsValidCategoryPath(string path)
+{
+    var categories = Data.GetCategoriesList();
+    foreach (var category in categories)
+    {
+        if (path == $"/api/categories/{category.cid}")
+        {
+            return true;
+        }
+    }
+    return false;
+}
 static bool IsValidJson(string json)
 {
     if (string.IsNullOrWhiteSpace(json))
