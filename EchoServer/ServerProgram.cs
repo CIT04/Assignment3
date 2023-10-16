@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using System.IO;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
+using System.Linq;
 
 var port = 5000;
 
@@ -89,6 +90,7 @@ CJTPResponse ProcessRequest(CJTPRequest request)
         status += "illegal body ";
     }
 
+    //Send echo
     if (request.Method == "echo" && !string.IsNullOrEmpty(request.Body))
     {
         return new CJTPResponse
@@ -97,6 +99,14 @@ CJTPResponse ProcessRequest(CJTPRequest request)
             Body = request.Body
         };
     }
+
+    //API tests
+    //Wrong categories -path
+    if (request.Path is not ("/api/categories" or "testing"))
+    {
+        status += "4 Bad Request ";
+    } 
+
 
     // Send back success if no errors have been added to status
     if (string.IsNullOrEmpty(status))
@@ -111,8 +121,7 @@ CJTPResponse ProcessRequest(CJTPRequest request)
     {
         return new CJTPResponse
         {
-            Status = status.Trim(),
-            Body = status.Trim()
+            Status = status.Trim()
         };
     }
 }
@@ -157,3 +166,30 @@ public class CJTPResponse
     public string Body { get; set; }
 }
 
+public class categories
+{
+    public int cid { get; set; }
+    public string name { get; set; }
+
+    public override string ToString()
+    {
+        return $"Id = {cid}, Name = {name}";
+    }
+}
+
+
+public class Data
+{
+    public static List<categories> GetCategoriesList()
+    {
+        return new List<categories>
+        {
+            new categories { cid = 1, name = "Beverages" },
+            new categories { cid = 2, name = "Condiments" },
+            new categories { cid = 3, name = "Confections" },
+
+
+        };
+    }
+
+}
