@@ -26,3 +26,9 @@ C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\refint\
 C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.pdb
 C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.genruntimeconfig.cache
 C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\ref\EchoServer.dll
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.csproj.AssemblyReference.cache
+C:\Users\magnu\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.csproj.CopyComplete
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.csproj.AssemblyReference.cache
+C:\Users\Marcus\Documents\GitHub\Assignment3\EchoServer\obj\Debug\net7.0\EchoServer.csproj.CopyComplete
